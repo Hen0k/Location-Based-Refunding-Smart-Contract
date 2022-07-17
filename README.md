@@ -39,7 +39,7 @@ Made with [contrib.rocks](https://contrib.rocks).
 [issues-shield]: https://img.shields.io/github/issues/Hen0k/Location-Based-Refunding-Smart-Contract.svg?style=for-the-badge
 [issues-url]: https://github.com/Hen0k/Location-Based-Refunding-Smart-Contract/issues
 [license-shield]: https://img.shields.io/github/license/Hen0k/Location-Based-Refunding-Smart-Contract.svg?style=for-the-badge
-[license-url]: https://github.com/Hen0k/Location-Based-Refunding-Smart-Contract/blob/master/LICENSE.txt
+[license-url]: https://github.com/Hen0k/Location-Based-Refunding-Smart-Contract/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/henok-tilaye-b18840151/
 [smart-contract-folder]: https://github.com/Hen0k/Location-Based-Refunding-Smart-Contract/tree/main/smart-contract
