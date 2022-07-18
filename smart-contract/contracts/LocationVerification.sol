@@ -104,4 +104,10 @@ contract LBRC {
     //     if (empContractStatus[_empAdd].compCount > 3) return true;
     //     else return false;
     // }
+
+    function getAdmin() public view returns(address) {
+        return employer;
+    }
+
+    
 }
