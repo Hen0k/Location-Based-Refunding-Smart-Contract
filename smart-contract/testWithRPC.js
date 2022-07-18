@@ -2,9 +2,9 @@ const { ethers, providers } = require('ethers');
 const LBRC = require("./build/contracts/LBRC.json");
 const abi = LBRC.abi;
 
-const contractAddress = "0xe776c87A406a622A24a042c9e0dC82c0e0bf6ED9"
+const contractAddress = "0x13F68498cC89d195C12741c426348B65b74832Ff"
 
-const privOne = "caac38c150f14867b7f6e64f7497f5053c87cb231c439fdee96b6d7283faf019";
+const privOne = "0978d90fa234b170ca65f12b3b3ebe5e075ffeca4b1ce10df2d84b170c579059";
 
 const url = "http://127.0.0.1:7545";
 
@@ -15,7 +15,7 @@ const signer = new ethers.Wallet(
 );
 const contract = new ethers.Contract(contractAddress, abi, signer);
 
-const empAddr = "0x770Ea67BA7e7eEca835407a2092aE467251CF091"
+const empAddr = "0x503F650710dAee8F0e3F57cBb8D0f05926776f61"
 const addEmployee = async () => {
     const status = await contract.setAccount(
         empAddr,
@@ -38,14 +38,14 @@ const getEmps = async () => {
     console.log(emps)
 }
 
-privTwo = "739c661f3885ca68269fb44e9fc1a42ec3fc19e73cd3e0b65618991ca9cca85c"
+privTwo = "b9f663c7ba3195af1c254973003e929f30905d89640b2a94ab651ac2cd228787"
 const signerTwo = new ethers.Wallet(
     privTwo,
     provider
 );
 const empContract = new ethers.Contract(contractAddress, abi, signerTwo);
 const updateStatus = async() => {
-    const status = await empContract.updateStatus(1, 2)
+    const status = await empContract.updateStatus(4, 2)
     console.log("Done updating")
 }
 
@@ -54,5 +54,7 @@ const getStatus = async() => {
     console.log(status)
 }
 
-// updateStatus().then(console.log("Done"))
-getStatus().then(console.log("Done"))
+
+// addEmployee().then(console.log("Admin: Employee Added"))
+updateStatus().then(console.log("Done"))
+// getStatus().then(console.log("Done"))
