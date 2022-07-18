@@ -7,9 +7,9 @@ contract LBRC {
     address[] public employees;
 
     struct ContractStatus {
-        int256 cenLat;
-        int256 cenLon;
-        int256 radius;
+        int8 cenLat;
+        int8 cenLon;
+        int8 radius;
         uint8 payAmount;
         uint8 compCount;
         uint8 reqAmount;
@@ -54,8 +54,8 @@ contract LBRC {
     }
 
     function getDistance(
-        int256 _lat,
-        int256 _lon
+        int8 _lat,
+        int8 _lon
     ) private view returns (int256 dist) {
         int256 x = _lat - empContractStatus[msg.sender].cenLat;
         int256 y = _lon - empContractStatus[msg.sender].cenLon;
@@ -67,9 +67,9 @@ contract LBRC {
     // only employer has access
     function setAccount(
         address _empAddr,
-        int256 _cenLat,
-        int256 _cenLon,
-        int256 _radius,
+        int8 _cenLat,
+        int8 _cenLon,
+        int8 _radius,
         uint8 _payAmount,
         uint8 _reqAmount
         // Should also set the duration the contract will be checking for
@@ -84,8 +84,8 @@ contract LBRC {
     }
 
     function updateStatus(
-        int256 _lat, 
-        int256 _lon
+        int8 _lat, 
+        int8 _lon
         ) public {
             int256 dist = getDistance(_lat, _lon);
             if (dist < empContractStatus[msg.sender].radius) {
